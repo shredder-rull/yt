@@ -8,6 +8,8 @@ module Yt
     # @see https://developers.google.com/youtube/v3/docs/videos#resource
     # @see https://developers.google.com/youtube/v3/docs/playlists#resource
     # @see https://developers.google.com/youtube/v3/docs/playlistItems#resource
+    # @see https://developers.google.com/youtube/v3/docs/commentThreads#resource
+    # @see https://developers.google.com/youtube/v3/docs/comments#resource
     class Snippet < Base
       attr_reader :data
 
@@ -28,6 +30,29 @@ module Yt
       has_attribute :position, type: Integer
       has_attribute :resource_id, default: {}
       has_attribute :thumbnails, default: {}
+
+      #commentThreads attributes
+      has_attribute :video_id
+      has_attribute :can_replay
+      has_attribute :total_replay_count
+      has_attribute :is_public
+      has_attribute :top_level_comment
+
+      #comment attributes
+      has_attribute :text_display
+      has_attribute :text_original
+      has_attribute :parent_id
+      has_attribute :author_display_name
+      has_attribute :author_profile_image_url
+      has_attribute :author_channel_url
+      has_attribute :author_channel_id
+      has_attribute :author_googleplus_profile_url
+      has_attribute :can_rate
+      has_attribute :viewer_rating
+      has_attribute :like_count
+      has_attribute :moderation_status
+      has_attribute :published_at, :type => Time
+      has_attribute :updated_at, :type => Time
 
       def thumbnail_url(size = :default)
         thumbnails.fetch(size.to_s, {})['url']

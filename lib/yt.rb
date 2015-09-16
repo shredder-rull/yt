@@ -1,5 +1,7 @@
 require 'yt/config'
 require 'yt/version'
+require 'yt/models/comment'
+require 'yt/models/comment_thread'
 require 'yt/models/account'
 require 'yt/models/channel'
 require 'yt/models/claim'

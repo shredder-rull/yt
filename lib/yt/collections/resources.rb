@@ -5,6 +5,15 @@ module Yt
   module Collections
     # @private
     class Resources < Base
+
+      # def initialize(options)
+      #   super
+      #   if options[:items] and options[:items].size > 0
+      #     @items = options[:items].map{|i| new_item(i)}
+      #     self.total_results = @items.size
+      #   end
+      # end
+
       def delete_all(params = {})
         do_delete_all params
       end

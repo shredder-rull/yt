@@ -376,6 +376,16 @@ module Yt
 
       has_many :resumable_sessions
 
+      has_many :comment_threads
+
+      def comments
+        comment_threads.map(&:top_level_comment)
+      end
+
+      def add_comment(text)
+        comment_threads.insert(:text_original => text)
+      end
+
     ### ANALYTICS ###
 
       # @macro reports

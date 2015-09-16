@@ -24,4 +24,5 @@ Gemfile.lock
 doc/
 .yardoc/
 _site/
+.idea
 TODO.md
