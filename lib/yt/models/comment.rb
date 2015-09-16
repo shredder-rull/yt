@@ -8,11 +8,11 @@ module Yt
       delegate :text_display, to: :snippet
       delegate :text_original, to: :snippet
       delegate :parent_id, to: :snippet
-      delegate :autor_display_name, to: :snippet
-      delegate :autor_profile_image_url, to: :snippet
-      delegate :autor_channel_url, to: :snippet
-      delegate :autor_channel_id, to: :snippet
-      delegate :autor_googleplus_profile_url, to: :snippet
+      delegate :author_display_name, to: :snippet
+      delegate :author_profile_image_url, to: :snippet
+      delegate :author_channel_url, to: :snippet
+      delegate :author_channel_id, to: :snippet
+      delegate :author_googleplus_profile_url, to: :snippet
       delegate :can_rate, to: :snippet
       delegate :viewer_rating, to: :snippet
       delegate :like_count, to: :snippet
