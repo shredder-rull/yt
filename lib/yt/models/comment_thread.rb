@@ -42,6 +42,10 @@ module Yt
         super
       end
 
+      def reply(text)
+        comments.insert(:text_original => text)
+      end
+
       private
 
       def exists?
