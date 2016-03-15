@@ -3,6 +3,11 @@ module Yt
   module Collections
     class Comments < Resources
 
+      def initialize(options = {})
+        super
+        @items = options[:items].map{|i| new_item(i)} if options[:items]
+      end
+
       private
 
       def list_params
